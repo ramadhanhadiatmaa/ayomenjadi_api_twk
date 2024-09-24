@@ -19,7 +19,7 @@ type Quiz struct {
 	Optionurle  string `json:"optionurle"`
 	Result      int    `json:"result"`
 	Tipe        string `json:"tipe"`
-	Val         bool   `json:"value"`
+	Val         string `json:"value"`
 	Vala        int    `json:"valuea"`
 	Valb        int    `json:"valueb"`
 	Valc        int    `json:"valuec"`
