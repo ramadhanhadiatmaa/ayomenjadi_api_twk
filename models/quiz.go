@@ -12,11 +12,6 @@ type Quiz struct {
 	Optionc     string `json:"optionc"`
 	Optiond     string `json:"optiond"`
 	Optione     string `json:"optione"`
-	Optionurla  string `json:"optionurla"`
-	Optionurlb  string `json:"optionurlb"`
-	Optionurlc  string `json:"optionurlc"`
-	Optionurld  string `json:"optionurld"`
-	Optionurle  string `json:"optionurle"`
 	Result      int    `json:"result"`
 	Tipe        string `json:"tipe"`
 	Val         string `json:"value"`
