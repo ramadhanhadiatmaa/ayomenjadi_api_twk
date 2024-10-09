@@ -7,14 +7,14 @@ COPY . .
 
 RUN go mod download
 
-RUN CGO_ENABLED=0 go build -o amquiz
+RUN CGO_ENABLED=0 go build -o amtwk
 
 FROM alpine:latest
 
 WORKDIR /app
 
-COPY --from=build /app/amquiz .
+COPY --from=build /app/amtwk .
 
-EXPOSE 8402
+EXPOSE 8451
 
-CMD [ "./amquiz" ]
+CMD [ "./amtwk" ]

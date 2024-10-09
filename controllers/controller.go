@@ -11,10 +11,11 @@ func Index(c *fiber.Ctx) error {
 
 	var quiz []models.Quiz
 
-	models.DB.Db.Find(&quiz)
+	if err := models.DB.Db.Order("RANDOM()").Limit(5).Find(&quiz).Error; err != nil {
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": "Failed to fetch record"})
+	}
 
 	return c.Status(fiber.StatusOK).JSON(quiz)
-
 }
 
 func Create(c *fiber.Ctx) error {
